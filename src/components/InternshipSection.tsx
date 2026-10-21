@@ -47,12 +47,12 @@ export const InternshipSection: React.FC = () => {
           {INTERNSHIPS_DATA.map((intern, idx) => (
             <motion.div
               key={intern.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 22 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.15 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              whileHover={{ y: -6 }}
-              className="p-7 sm:p-8 rounded-3xl bg-white border border-slate-200 hover:border-blue-400 shadow-[0_4px_25px_rgba(0,0,0,0.04)] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              transition={{ duration: 0.55, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ y: -4 }}
+              className="p-7 sm:p-8 rounded-3xl bg-white border border-slate-200/90 hover:border-blue-400 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_16px_36px_-6px_rgba(37,99,235,0.09)] transition-all duration-300 ease-out flex flex-col justify-between group"
             >
               <div>
                 {/* Header row */}

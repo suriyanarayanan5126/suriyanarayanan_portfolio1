@@ -118,7 +118,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               {/* 1. View My Projects */}
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-indigo-800 text-white font-semibold text-sm shadow-[0_4px_20px_rgba(37,99,235,0.25)] hover:shadow-[0_6px_25px_rgba(37,99,235,0.35)] transition-all cursor-pointer group"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-indigo-800 text-white font-semibold text-sm shadow-[0_4px_20px_rgba(37,99,235,0.25)] hover:shadow-[0_8px_25px_rgba(37,99,235,0.32)] hover:-translate-y-0.5 transition-all duration-300 ease-out cursor-pointer group"
               >
                 <FolderGit2 className="w-4 h-4" />
                 <span>View My Projects</span>
@@ -128,7 +128,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               {/* 2. View Certificates */}
               <a
                 href="#certificates"
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-white hover:bg-slate-50 text-slate-800 hover:text-blue-600 font-semibold text-sm border border-slate-200 shadow-xs hover:border-blue-300 transition-all cursor-pointer group"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-white hover:bg-slate-50 text-slate-800 hover:text-blue-600 font-semibold text-sm border border-slate-200 shadow-xs hover:border-blue-300 hover:shadow-[0_8px_20px_rgba(37,99,235,0.08)] hover:-translate-y-0.5 transition-all duration-300 ease-out cursor-pointer group"
               >
                 <Award className="w-4 h-4 text-amber-500 group-hover:scale-110 transition-transform" />
                 <span>View Certificates</span>
@@ -137,7 +137,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               {/* 3. Download Resume */}
               <button
                 onClick={onOpenResume}
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-white hover:bg-slate-50 text-slate-800 hover:text-blue-600 font-semibold text-sm border border-slate-200 shadow-xs hover:border-blue-300 transition-all cursor-pointer group"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-white hover:bg-slate-50 text-slate-800 hover:text-blue-600 font-semibold text-sm border border-slate-200 shadow-xs hover:border-blue-300 hover:shadow-[0_8px_20px_rgba(37,99,235,0.08)] hover:-translate-y-0.5 transition-all duration-300 ease-out cursor-pointer group"
               >
                 <FileText className="w-4 h-4 text-blue-600" />
                 <span>Download Resume</span>
@@ -146,7 +146,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               {/* 4. Contact Me */}
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm border border-slate-200 transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm border border-slate-200 hover:-translate-y-0.5 transition-all duration-300 ease-out cursor-pointer"
               >
                 <Mail className="w-4 h-4 text-slate-600" />
                 <span>Contact Me</span>

@@ -139,12 +139,12 @@ export const CertificatesSection: React.FC = () => {
             return (
               <motion.div
                 key={cert.id}
-                initial={{ opacity: 0, y: 25 }}
+                initial={{ opacity: 0, y: 22 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.15 }}
-                transition={{ duration: 0.5, delay: idx * 0.05 }}
-                whileHover={{ y: -6 }}
-                className="rounded-3xl bg-white border border-slate-200/90 hover:border-blue-500 shadow-[0_4px_25px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_35px_rgba(37,99,235,0.12)] transition-all duration-300 flex flex-col justify-between overflow-hidden group cursor-pointer h-full min-h-[440px]"
+                viewport={{ once: false, amount: 0.12 }}
+                transition={{ duration: 0.55, delay: idx * 0.05, ease: [0.16, 1, 0.3, 1] }}
+                whileHover={{ y: -4 }}
+                className="rounded-3xl bg-white border border-slate-200/90 hover:border-blue-400 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_16px_36px_-6px_rgba(37,99,235,0.09)] transition-all duration-300 ease-out flex flex-col justify-between overflow-hidden group cursor-pointer h-full min-h-[440px]"
                 onClick={() => {
                   setActiveModalCert(cert);
                   setModalZoom(1);
@@ -158,7 +158,7 @@ export const CertificatesSection: React.FC = () => {
                     pdfUrl={cert.filePath}
                     imagePath={cert.imagePath}
                     title={cert.title}
-                    className="group-hover:scale-105 transition-transform duration-300"
+                    className="group-hover:scale-[1.025] transition-transform duration-300 ease-out"
                   />
 
                   {/* Uploaded File Reference Tag */}

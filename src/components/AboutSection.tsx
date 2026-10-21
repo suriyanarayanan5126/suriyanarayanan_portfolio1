@@ -159,12 +159,12 @@ export const AboutSection: React.FC = () => {
           {pillars.map((pillar, idx) => (
             <motion.div
               key={pillar.title}
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: 22 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.15 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              whileHover={{ y: -6 }}
-              className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              transition={{ duration: 0.55, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ y: -3 }}
+              className="p-6 rounded-2xl bg-white border border-slate-200/90 hover:border-blue-400 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_14px_32px_-6px_rgba(37,99,235,0.08)] transition-all duration-300 ease-out flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">

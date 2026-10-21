@@ -97,7 +97,7 @@ export const ContactSection: React.FC = () => {
             className="lg:col-span-5 space-y-4"
           >
             {/* Email Card */}
-            <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-[0_4px_25px_rgba(0,0,0,0.03)] flex items-center justify-between gap-4">
+            <div className="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_28px_-6px_rgba(37,99,235,0.07)] hover:border-blue-400 hover:-translate-y-0.5 transition-all duration-300 ease-out flex items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <div className="p-3 rounded-2xl bg-blue-50 text-blue-600">
                   <Mail className="w-5 h-5" />
@@ -122,7 +122,7 @@ export const ContactSection: React.FC = () => {
             </div>
 
             {/* Phone Card */}
-            <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-[0_4px_25px_rgba(0,0,0,0.03)] flex items-center justify-between gap-4">
+            <div className="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_28px_-6px_rgba(37,99,235,0.07)] hover:border-emerald-400 hover:-translate-y-0.5 transition-all duration-300 ease-out flex items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <div className="p-3 rounded-2xl bg-emerald-50 text-emerald-600">
                   <Phone className="w-5 h-5" />
@@ -147,7 +147,7 @@ export const ContactSection: React.FC = () => {
             </div>
 
             {/* Location Card */}
-            <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-[0_4px_25px_rgba(0,0,0,0.03)] flex items-center gap-3">
+            <div className="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_28px_-6px_rgba(37,99,235,0.07)] hover:border-indigo-400 hover:-translate-y-0.5 transition-all duration-300 ease-out flex items-center gap-3">
               <div className="p-3 rounded-2xl bg-indigo-50 text-indigo-600">
                 <MapPin className="w-5 h-5" />
               </div>

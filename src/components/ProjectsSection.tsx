@@ -117,17 +117,17 @@ export const ProjectsSection: React.FC = () => {
             return (
               <motion.div
                 key={project.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.15 }}
-                transition={{ duration: 0.5, delay: idx * 0.08 }}
-                whileHover={{ y: -6 }}
-                className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 hover:border-blue-400 shadow-[0_4px_25px_rgba(0,0,0,0.04)] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                transition={{ duration: 0.55, delay: idx * 0.07, ease: [0.16, 1, 0.3, 1] }}
+                whileHover={{ y: -4 }}
+                className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/90 hover:border-blue-400 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_16px_36px_-6px_rgba(37,99,235,0.09)] transition-all duration-300 ease-out flex flex-col justify-between group"
               >
                 <div>
                   {/* Card Header Row */}
                   <div className="flex items-center justify-between mb-4">
-                    <div className="p-2.5 rounded-2xl bg-blue-50 border border-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <div className="p-2.5 rounded-2xl bg-blue-50 border border-blue-100/80 text-blue-600 group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-sm transition-all duration-300">
                       {project.category === 'embedded' && <Cpu className="w-5 h-5" />}
                       {project.category === 'robotics' && <Navigation className="w-5 h-5" />}
                       {project.category === 'ai' && <TrendingUp className="w-5 h-5" />}
@@ -140,7 +140,7 @@ export const ProjectsSection: React.FC = () => {
                   </div>
 
                   {/* Title & Short Summary */}
-                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-heading mb-2 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-heading mb-2 group-hover:text-blue-600 transition-colors duration-200">
                     {project.title}
                   </h3>
                   <p className="text-slate-600 text-sm leading-relaxed mb-5 font-sans">
@@ -149,7 +149,7 @@ export const ProjectsSection: React.FC = () => {
 
                   {/* GENUINE PLAYABLE HTML5 VIDEO PLAYER (Exact Uploaded Original MP4) */}
                   {project.hasVideoSlot && project.videoFileName && (
-                    <div className="rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 shadow-sm mb-5 flex flex-col">
+                    <div className="rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 shadow-sm mb-5 flex flex-col transition-shadow duration-300 group-hover:shadow-md">
                       <div className="relative aspect-video w-full bg-black flex items-center justify-center overflow-hidden">
                         <video
                           controls
@@ -158,7 +158,6 @@ export const ProjectsSection: React.FC = () => {
                           poster={project.thumbnailUrl}
                           className="w-full h-full object-contain"
                         >
-                          <source src={`/assets/projects/${project.videoFileName}`} type="video/mp4" />
                           <source src={`/videos/${encodeURIComponent(project.videoFileName)}`} type="video/mp4" />
                           <source src={`/assets/projects/${encodeURIComponent(project.videoFileName)}`} type="video/mp4" />
                           <source src={project.videoPath} type="video/mp4" />
@@ -167,7 +166,7 @@ export const ProjectsSection: React.FC = () => {
 
                         {/* Top Video Filename Tag */}
                         <div className="absolute top-2.5 left-2.5 z-10 pointer-events-none">
-                          <span className="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-white/95 text-slate-800 border border-slate-200 shadow-xs flex items-center gap-1.5">
+                          <span className="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-white/95 text-slate-800 border border-slate-200 shadow-xs flex items-center gap-1.5 backdrop-blur-xs">
                             <Video className="w-3 h-3 text-blue-600" />
                             <span>{project.videoFileName}</span>
                           </span>
@@ -185,7 +184,7 @@ export const ProjectsSection: React.FC = () => {
                             href={`/videos/${encodeURIComponent(project.videoFileName)}`}
                             target="_blank"
                             rel="noreferrer"
-                            className="inline-flex items-center gap-1 text-[11px] text-blue-600 hover:text-blue-800 hover:underline font-semibold"
+                            className="inline-flex items-center gap-1 text-[11px] text-blue-600 hover:text-blue-800 hover:underline font-semibold transition-colors"
                             title="Open original MP4 in new tab"
                           >
                             <ExternalLink className="w-3 h-3" />

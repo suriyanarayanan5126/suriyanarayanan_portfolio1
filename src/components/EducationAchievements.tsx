@@ -61,11 +61,12 @@ export const EducationAchievements: React.FC = () => {
               {EDUCATION_DATA.map((edu, idx) => (
                 <motion.div
                   key={edu.institution}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 18 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: false, amount: 0.2 }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="p-6 sm:p-7 rounded-3xl bg-[#fafafc] border border-slate-200 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:border-blue-400 transition-all duration-300"
+                  transition={{ duration: 0.55, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                  whileHover={{ y: -3 }}
+                  className="p-6 sm:p-7 rounded-3xl bg-[#fafafc] border border-slate-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:border-blue-400 hover:shadow-[0_12px_28px_-6px_rgba(37,99,235,0.07)] transition-all duration-300 ease-out"
                 >
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                     <span className="text-xs font-mono font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md border border-blue-200">
@@ -106,11 +107,12 @@ export const EducationAchievements: React.FC = () => {
             <div className="space-y-4">
               {/* Achievement 1: Resource Person */}
               <motion.div 
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
-                transition={{ duration: 0.5 }}
-                className="p-6 sm:p-7 rounded-3xl bg-[#fafafc] border border-slate-200 hover:border-blue-400 shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300"
+                transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+                whileHover={{ y: -3 }}
+                className="p-6 sm:p-7 rounded-3xl bg-[#fafafc] border border-slate-200/90 hover:border-blue-400 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_28px_-6px_rgba(37,99,235,0.07)] transition-all duration-300 ease-out"
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="p-2.5 rounded-xl bg-blue-50 text-blue-600">
@@ -130,11 +132,12 @@ export const EducationAchievements: React.FC = () => {
 
               {/* Achievement 2: Symposium Prizes */}
               <motion.div 
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="p-6 sm:p-7 rounded-3xl bg-[#fafafc] border border-slate-200 hover:border-blue-400 shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300"
+                transition={{ duration: 0.55, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+                whileHover={{ y: -3 }}
+                className="p-6 sm:p-7 rounded-3xl bg-[#fafafc] border border-slate-200/90 hover:border-blue-400 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_28px_-6px_rgba(37,99,235,0.07)] transition-all duration-300 ease-out"
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="p-2.5 rounded-xl bg-amber-50 text-amber-600">
